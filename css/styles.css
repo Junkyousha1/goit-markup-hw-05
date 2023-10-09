@@ -532,7 +532,43 @@ img {
 .portfolio-project-card{
     display: flex;
     flex-direction: column;
-    flex-basis: calc((100%-60px)/3);
+    flex-basis: calc((100%-60px)/3);   
+}
+.portfolio-overlay-box{
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 294px;
+}
+.portfolio-overlay-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translatey(200%);
+    transition: 500ms;
+    padding-top: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.portfolio-overlay span{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+}
+.portfolio-project-card:hover .portfolio-overlay{
+    transform: translatey(0);
 }
 .portfolio-project-card:hover{
     cursor: pointer;
